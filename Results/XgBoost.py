@@ -25,6 +25,7 @@ model.fit(X_train, y_train)
 # predicting on test set
 y_pred = model.predict(X_test)
 
+accuracy_score(y_test,y_pred_test)  # 0.9113133940182054
 precision_score(y_test, y_pred)  # 0.6482412060301508
 f1_score(y_test, y_pred)  # 0.4307178631051753
 roc_auc_score(y_test, y_pred)  # 0.6510903483309144
