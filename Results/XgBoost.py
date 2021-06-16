@@ -32,13 +32,13 @@ for leftout_graph in graphs:
 
     for graph in graphs:
         if graph != leftout_graph:
-            df = pd.read_csv('feat_' + graph + '.csv', index_col='index')
+            df = pd.read_csv('Features/feat_' + graph + '.csv', index_col='index')
             X_train = X_train.append(df)
-            df = pd.read_csv('ess_' + graph + '.csv', index_col='index')
+            df = pd.read_csv('EssGenes/ess_' + graph + '.csv', index_col='index')
             y_train = y_train.append(df)
 
-    X_test = pd.read_csv('feat_' + leftout_graph + '.csv', index_col='index')
-    y_test = pd.read_csv('ess_' + leftout_graph + '.csv', index_col='index')
+    X_test = pd.read_csv('Features/feat_' + leftout_graph + '.csv', index_col='index')
+    y_test = pd.read_csv('EssGenes/ess_' + leftout_graph + '.csv', index_col='index')
     y_train = list(y_train.ess)
     y_test = list(y_test.ess)
 
